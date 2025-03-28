@@ -38,6 +38,8 @@ function App() {
       <nav>
         <Link to="/me/">Highlights</Link>
         {" | "}
+        <Link to="/me/experience">Experience</Link>
+        {" | "}
         <Link to="/me/profile">Profile</Link>
         {" | "}
         <Link to="/me/contact">Contact</Link>
