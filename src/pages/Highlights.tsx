@@ -1,6 +1,6 @@
 export function Highlights() {
     return (
-        <ul align="left">
+        <ul style={{ textAlign: "left" }}>
             <li>AWS Associate Developer Certified August 2021 & December 2024</li>
             <li>IBM Quantum Certification - Challenge Advanced Achievement Fall 2020</li>
             <li>Past Executive director and member of Belfast Operatic Company</li>
