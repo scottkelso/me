@@ -7,6 +7,9 @@ import microsoftImg from './images/microsoft.png'
 import ibmImg from './images/ibm.png'
 import Grid from '@mui/material/Grid'
 import { Box } from '@mui/material'
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import XIcon from '@mui/icons-material/X';
 
 function App() {
   const year = new Date().getFullYear()
@@ -55,6 +58,18 @@ function App() {
           </a>
         </Grid>
       </Grid>
+
+      <Box>
+        <a href='https://github.com/scottkelso' target="_blank">
+          <GitHubIcon sx={{mx: 2}} />
+        </a>
+        <a href='https://x.com/scottkelso07' target="_blank">
+        <LinkedInIcon sx={{mx: 2}} />
+        </a>
+        <a href='https://www.linkedin.com/in/kelsojosh/' target="_blank">
+        <XIcon sx={{mx: 2}} />
+        </a>
+      </Box>
     </>
   )
 }
