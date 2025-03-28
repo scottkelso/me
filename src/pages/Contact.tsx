@@ -1,3 +1,4 @@
 export function Contact() {
-    return <h2>Contact</h2>;
+    const email = "joshkelsowork@gmail.com"
+    return <h2><a href={"mailto:" + email}>{email}</a></h2>;
 }
