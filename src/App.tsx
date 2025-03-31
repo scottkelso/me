@@ -65,10 +65,10 @@ function App() {
         <a href='https://github.com/scottkelso' target="_blank">
           <GitHubIcon sx={{mx: 2}} />
         </a>
-        <a href='https://x.com/scottkelso07' target="_blank">
+        <a href='https://www.linkedin.com/in/kelsojosh/' target="_blank">
         <LinkedInIcon sx={{mx: 2}} />
         </a>
-        <a href='https://www.linkedin.com/in/kelsojosh/' target="_blank">
+        <a href='https://x.com/scottkelso07' target="_blank">
         <XIcon sx={{mx: 2}} />
         </a>
       </Box>
