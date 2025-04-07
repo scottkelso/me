@@ -14,7 +14,7 @@ import XIcon from '@mui/icons-material/X';
 function App() {
   const year = new Date().getFullYear()
   return (
-    <>
+    <Box sx={{ maxWidth: '100vw', overflowX: 'hidden' }}>
       <h1>Joshua Scott Kelso</h1>
       <h2>Full Stack Lead Software Engineer</h2>
       <Box maxWidth={900}>
@@ -25,13 +25,13 @@ function App() {
 
       <Grid container spacing={1} maxWidth={900} margin="auto" marginTop={5} marginBottom={15}>
         <Grid size={4}>
-          <img src={awsImg} alt="Logo" width={150} />
+          <img src={awsImg} alt="Logo" style={{ width: '100%', maxWidth: 150, height: 'auto'}} />
         </Grid>
         <Grid size={4}>
-          <img src={microsoftImg} alt="Logo" width={150}/>
+          <img src={microsoftImg} alt="Logo" style={{ width: '100%', maxWidth: 150, height: 'auto'}}/>
         </Grid>
         <Grid size={4}>
-          <img src={ibmImg} alt="Logo" width={150} />
+          <img src={ibmImg} alt="Logo" style={{ width: '100%', maxWidth: 150, height: 'auto'}} />
         </Grid>
       </Grid>
 
@@ -72,7 +72,7 @@ function App() {
         <XIcon sx={{mx: 2}} />
         </a>
       </Box>
-    </>
+    </Box>
   )
 }
 
