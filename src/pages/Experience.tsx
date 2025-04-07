@@ -1,6 +1,7 @@
 
 import { ExperienceItem } from "../components/ExperienceItem";
 import kainosImg from '../images/kainos.jpeg'
+import jfpImg from '../images/jfp.jpeg'
 import instilImg from '../images/instil.jpg'
 
 
@@ -34,7 +35,7 @@ export function Experience() {
                 "Atypical 'Shape Up' agile methodology compared to scrum/kanban",
                 "Advised on onboarding processes, team management, and clean code practises"
             ],
-            img: "https://media.licdn.com/dms/image/v2/D4E2DAQH0vmEmfCCbVQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1730485070361?e=1743786000&v=beta&t=RhyZdXXEODLNo4zV1F_SNxtjfO136-uE0GY3HAySKhc"
+            img: jfpImg
 
         },
         {
