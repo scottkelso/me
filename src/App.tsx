@@ -6,7 +6,7 @@ import awsImg from './images/aws.png'
 import microsoftImg from './images/microsoft.png'
 import ibmImg from './images/ibm.png'
 import Grid from '@mui/material/Grid'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import XIcon from '@mui/icons-material/X';
@@ -18,9 +18,9 @@ function App() {
       <h1>Joshua Scott Kelso</h1>
       <h2>Full Stack Lead Software Engineer</h2>
       <Box maxWidth={900}>
-        <p className="read-the-docs" style={{ padding: 20 }}>
+        <Typography className="read-the-docs" >
         Josh is a lead software engineer with five year's technical industry experience with a 1st honour master's in computer science from <a href='https://www.qub.ac.uk/'>Queen's University Belfast</a>.  Having spent 2+ years in R'n'D Josh has a keen interest for innovation services, research, L&D and is equipped with initiative and drive to ensure that he capitalises on these new and emerging digital discoveries and curates them into new and existing client products.
-        </p>
+        </Typography>
       </Box>
 
       <Grid container spacing={1} maxWidth={900} margin="auto" marginTop={5} marginBottom={15}>

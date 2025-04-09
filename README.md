@@ -1,5 +1,17 @@
-# React + TypeScript + Vite
+# Personal Website - by Josh Kelso
+This website is built using React + TypeScript + Vite and hosted via Github Pages.
 
+## TODO
+* Add navigation bar
+* Organise sections into multiple pages
+* Add title page and parallax
+* Add projects
+* Add technical experience
+* Add word cloud of technologies
+* Fix theme
+* Update logo
+
+## About the Template
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
