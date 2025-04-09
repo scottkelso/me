@@ -17,7 +17,7 @@ function App() {
     <Box sx={{ maxWidth: '100vw', overflowX: 'hidden' }}>
       <h1>Joshua Scott Kelso</h1>
       <h2>Full Stack Lead Software Engineer</h2>
-      <Box maxWidth={900}>
+      <Box maxWidth={900} alignContent={"center"} margin="auto" marginTop={5} marginBottom={5}>
         <Typography className="read-the-docs" >
         Josh is a lead software engineer with five year's technical industry experience with a 1st honour master's in computer science from <a href='https://www.qub.ac.uk/'>Queen's University Belfast</a>.  Having spent 2+ years in R'n'D Josh has a keen interest for innovation services, research, L&D and is equipped with initiative and drive to ensure that he capitalises on these new and emerging digital discoveries and curates them into new and existing client products.
         </Typography>
@@ -41,6 +41,8 @@ function App() {
         <Link to="/me/experience">Experience</Link>
         {" | "}
         <Link to="/me/profile">Profile</Link>
+        {" | "}
+        <Link to="/me/tech">Technologies</Link>
         {" | "}
         <Link to="/me/contact">Contact</Link>
       </nav>
