@@ -3,6 +3,7 @@ import { ExperienceItem } from "../components/ExperienceItem";
 import kainosImg from '../images/kainos.jpeg'
 import jfpImg from '../images/jfp.jpeg'
 import instilImg from '../images/instil.jpg'
+import { Box } from "@mui/material";
 
 
 export function Experience() {
@@ -54,9 +55,9 @@ export function Experience() {
     ]
 
     return (
-        <>
+        <Box maxWidth={900} margin="auto" marginTop={5} marginBottom={5}>
             {experience.map((experience, index) => (
                 <ExperienceItem experienceItem={experience} key={index} />))}
-        </>
+        </Box>
     )
 }
