@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 
 export function Highlights() {
     return (
-        <Box maxWidth={900} margin="auto" marginTop={5} marginBottom={5}>
+        <Box maxWidth={900} sx={{marginX: {xs: 2, md:7}}} marginTop={5} marginBottom={5}>
             <ul style={{ textAlign: "left" }}>
                 <li>AWS Associate Developer Certified August 2021 & December 2024</li>
                 <li>IBM Quantum Certification - Challenge Advanced Achievement Fall 2020</li>

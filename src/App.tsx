@@ -9,6 +9,8 @@ import { Badges } from './components/Badges'
 import { Socials } from './components/Socials'
 
 import DownloadIcon from '@mui/icons-material/Download';
+import { Highlights } from './pages/Highlights'
+import { UnderlinedHeader } from './components/UnderlinedHeader'
 
 function App() {
   const year = new Date().getFullYear()
@@ -24,14 +26,16 @@ function App() {
           Josh is a lead software engineer with {yearsExperience} year's technical industry experience with a 1st honour master's in computer science from <a href='https://www.qub.ac.uk/'>Queen's University Belfast</a>.  Having spent 2+ years in R'n'D Josh has a keen interest for innovation services, research, L&D and is equipped with initiative and drive to ensure that he capitalises on these new and emerging digital discoveries and curates them into new and existing client products.
         </Typography>
 
-        <Stack direction="row" spacing={2} justifyContent="center" sx={{ marginBottom: 5 }}>
+        <Stack direction="row" spacing={2} justifyContent="center" sx={{ marginBottom: 10 }}>
           <Button variant="outlined" href={CV_URL} target='_blank' endIcon={<DownloadIcon />}>Download CV</Button>
         </Stack>
 
+        <UnderlinedHeader title="Highlights" sx={{marginX: {xs: 5, md:10}}} />
+        <Highlights/>
+        <Badges/>
+
         <Box marginTop={5} sx={{padding: 2}}>
           <nav>
-            <Link to="/me/">Highlights</Link>
-            {" | "}
             <Link to="/me/experience">Experience</Link>
             {" | "}
             <Link to="/me/tech">Technologies</Link>
@@ -40,7 +44,6 @@ function App() {
           </nav>
           <Outlet/>
           
-          <Badges/>
 
           <Grid container spacing={1} maxWidth={900} margin="auto" marginTop={5}>
             <Grid size={6} alignContent={"center"}>
