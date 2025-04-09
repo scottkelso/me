@@ -3,24 +3,27 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Link, Outlet } from 'react-router-dom'
 import Grid from '@mui/material/Grid'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import { HeroHeader } from './components/HeroHeader'
 import { Badges } from './components/Badges'
 import { Socials } from './components/Socials'
 
 function App() {
   const year = new Date().getFullYear()
+  const START_CAREER_YEAR = 2020
+  const yearsExperience = year - START_CAREER_YEAR
   return (
     <>
       <HeroHeader />
       <Box sx={{ margin: '0 auto', maxWidth: '1280px', textAlign: 'center' }} >
+        <Typography variant='h6' sx={{margin: {xs: 5, md:10}}} >
+          Josh is a lead software engineer with {yearsExperience} year's technical industry experience with a 1st honour master's in computer science from <a href='https://www.qub.ac.uk/'>Queen's University Belfast</a>.  Having spent 2+ years in R'n'D Josh has a keen interest for innovation services, research, L&D and is equipped with initiative and drive to ensure that he capitalises on these new and emerging digital discoveries and curates them into new and existing client products.
+        </Typography>
         <Box marginTop={5} sx={{padding: 2}}>
           <nav>
             <Link to="/me/">Highlights</Link>
             {" | "}
             <Link to="/me/experience">Experience</Link>
-            {" | "}
-            <Link to="/me/profile">Profile</Link>
             {" | "}
             <Link to="/me/tech">Technologies</Link>
             {" | "}
