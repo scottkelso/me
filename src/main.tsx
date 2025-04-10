@@ -11,7 +11,7 @@ import { Highlights } from './pages/Highlights.tsx';
 
 const router = createBrowserRouter([
   {
-    path: "/me/",
+    path: "/me",
     element: <App />,
     children: [
       {
