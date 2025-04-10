@@ -48,12 +48,12 @@ function App() {
           <Technologies/>
         </Box>
 
-        <Box marginY={10}>
+        <Box marginTop={10}>
           <UnderlinedHeader title="Contact" sx={{marginX: {xs: 5, md:10}, marginBottom: 3}} />
           <Contact/>
         </Box>
 
-        <Box marginTop={5} sx={{padding: 2}}>
+        <Box sx={{padding: 2}}>
           <Grid container spacing={1} maxWidth={900} margin="auto" marginTop={5}>
             <Grid size={6} alignContent={"center"}>
               <p style={{fontStyle: 'italic'}}>Made with Vite + React + Material UI</p>
