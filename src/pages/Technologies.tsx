@@ -1,5 +1,5 @@
 
-import { Paper, Table, TableBody, TableCell, TableContainer, TableRow } from "@mui/material";
+import { Box, Paper, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
 
 
 export function Technologies() {
@@ -31,10 +31,10 @@ export function Technologies() {
   ];
 
   return (
-    <>
+    <Box maxWidth={900} margin="auto">
     <TableContainer component={Paper} sx={{ marginTop: 5 }}>
-      <h1>Programming Languages</h1>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Typography variant="h2" padding={2}>Programming Languages</Typography>
+      <Table aria-label="simple table">
           <TableBody>
           {rows.map((row) => (
               <TableRow
@@ -51,8 +51,8 @@ export function Technologies() {
       </Table>
     </TableContainer>
       <TableContainer component={Paper} sx={{ marginTop: 5 }}>
-        <h1>Utility Systems</h1>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Typography variant="h2" padding={2}>Utility Systems</Typography>
+        <Table aria-label="simple table">
             <TableBody>
             {utility.map((row) => (
                 <TableRow
@@ -68,6 +68,6 @@ export function Technologies() {
             </TableBody>
         </Table>
       </TableContainer>
-    </>
+    </Box>
   )
 }

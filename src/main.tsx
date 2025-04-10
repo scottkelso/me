@@ -6,6 +6,8 @@ import App from './App.tsx'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Contact } from "./pages/Contact.tsx";
 import { Technologies } from './pages/Technologies.tsx';
+import { Experience } from './pages/Experience.tsx';
+import { Highlights } from './pages/Highlights.tsx';
 
 const router = createBrowserRouter([
   {
@@ -13,8 +15,12 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/me/",
-        element: <Technologies />,
+        path: "/me/highlights",
+        element: <Highlights />,
+      },
+      {
+        path: "/me/experience",
+        element: <Experience />,
       },
       {
         path: "/me/contact",

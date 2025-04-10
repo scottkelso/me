@@ -1,4 +1,4 @@
-import { Box, CardMedia, Collapse, IconButton, List, ListItem } from "@mui/material";
+import { Box, CardMedia, Collapse, IconButton, List, ListItem, useMediaQuery, useTheme } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
@@ -26,6 +26,9 @@ export function ExperienceItem({experienceItem}: ExperienceItemProps) {
     const handleToggle = () => {
       setExpanded(!expanded);
     };
+
+    const theme = useTheme();
+    const isSmOrLarger = useMediaQuery(theme.breakpoints.up('sm'));
     return (
         <Card sx={{ display:"flex", minWidth: 275, maxWidth:900, backgroundColor: 'background.paper', marginTop: 2 }}>
             <Box sx={{  width: '100%' }}>
@@ -55,7 +58,7 @@ export function ExperienceItem({experienceItem}: ExperienceItemProps) {
                   </Box>
                 </CardContent>
             </Box>
-            {experienceItem.img && (
+            {experienceItem.img && isSmOrLarger && (
                 <CardMedia
                     component="img"
                     sx={{ width: 151, marginLeft: 'auto'}}

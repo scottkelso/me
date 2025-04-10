@@ -1,7 +1,6 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Link, Outlet } from 'react-router-dom'
 import Grid from '@mui/material/Grid'
 import { Box, Button, Stack, Typography } from '@mui/material'
 import { HeroHeader } from './components/HeroHeader'
@@ -12,6 +11,8 @@ import DownloadIcon from '@mui/icons-material/Download';
 import { Highlights } from './pages/Highlights'
 import { UnderlinedHeader } from './components/UnderlinedHeader'
 import { Experience } from './pages/Experience'
+import { Technologies } from './pages/Technologies'
+import { Contact } from './pages/Contact'
 
 function App() {
   const year = new Date().getFullYear()
@@ -28,25 +29,31 @@ function App() {
         </Typography>
 
         <Stack direction="row" spacing={2} justifyContent="center" sx={{ marginBottom: 10 }}>
-          <Button variant="outlined" href={CV_URL} target='_blank' endIcon={<DownloadIcon />}>Download CV</Button>
+          <Button variant="contained" href={CV_URL} target='_blank' endIcon={<DownloadIcon />}>Download CV</Button>
         </Stack>
 
-        <UnderlinedHeader title="Highlights" sx={{marginX: {xs: 5, md:10}}} />
-        <Highlights/>
-        <Badges/>
+        <Box marginY={10}>
+          <UnderlinedHeader title="Highlights" sx={{marginX: {xs: 5, md:10}}} />
+          <Highlights/>
+          <Badges/>
+        </Box>
 
-        <UnderlinedHeader title="Technical Experience" sx={{marginX: {xs: 5, md:10}}} />
-        <Experience/>
+        <Box marginY={10}>
+          <UnderlinedHeader title="Technical Experience" sx={{marginX: {xs: 5, md:10}}} />
+          <Experience/>
+        </Box>
+
+        <Box marginY={10}>
+          <UnderlinedHeader title="Technologies" sx={{marginX: {xs: 5, md:10}}} />
+          <Technologies/>
+        </Box>
+
+        <Box marginY={10}>
+          <UnderlinedHeader title="Contact" sx={{marginX: {xs: 5, md:10}, marginBottom: 3}} />
+          <Contact/>
+        </Box>
 
         <Box marginTop={5} sx={{padding: 2}}>
-          <nav>
-            <Link to="/me/tech">Technologies</Link>
-            {" | "}
-            <Link to="/me/contact">Contact</Link>
-          </nav>
-          <Outlet/>
-          
-
           <Grid container spacing={1} maxWidth={900} margin="auto" marginTop={5}>
             <Grid size={6} alignContent={"center"}>
               <p style={{fontStyle: 'italic'}}>Made with Vite + React + Material UI</p>

@@ -55,7 +55,7 @@ export function Experience() {
     ]
 
     return (
-        <Box maxWidth={900} margin="auto" marginTop={5} marginBottom={5}>
+        <Box maxWidth={900} margin="auto" marginTop={5}>
             {experience.map((experience, index) => (
                 <ExperienceItem experienceItem={experience} key={index} />))}
         </Box>

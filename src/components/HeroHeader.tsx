@@ -8,7 +8,7 @@ export function HeroHeader(){
   const theme = useTheme();
   return (
     <Box
-      id="about"
+      id="hero-header"
       sx={{
         position: 'relative',
         height: '70vh',
