@@ -190,4 +190,4 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
  * LICENSE.md file in the root directory of this source tree.
  *
  * @license MIT
- */function zw(n){return A.createElement(PR,{flushSync:M0.flushSync,...n})}const _w=bw([{path:"/me/",element:j.jsx(OT,{}),children:[{path:"/me/highlights",element:j.jsx(U0,{})},{path:"/me/experience",element:j.jsx(L0,{})},{path:"/me/contact",element:j.jsx($0,{})},{path:"/me/tech",element:j.jsx(H0,{})}]}]);C1.createRoot(document.getElementById("root")).render(j.jsx(A.StrictMode,{children:j.jsx(zw,{router:_w})}));
+ */function zw(n){return A.createElement(PR,{flushSync:M0.flushSync,...n})}const _w=bw([{path:"/me",element:j.jsx(OT,{}),children:[{path:"/me/highlights",element:j.jsx(U0,{})},{path:"/me/experience",element:j.jsx(L0,{})},{path:"/me/contact",element:j.jsx($0,{})},{path:"/me/tech",element:j.jsx(H0,{})}]}]);C1.createRoot(document.getElementById("root")).render(j.jsx(A.StrictMode,{children:j.jsx(zw,{router:_w})}));
