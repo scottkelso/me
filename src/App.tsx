@@ -11,6 +11,7 @@ import { Socials } from './components/Socials'
 import DownloadIcon from '@mui/icons-material/Download';
 import { Highlights } from './pages/Highlights'
 import { UnderlinedHeader } from './components/UnderlinedHeader'
+import { Experience } from './pages/Experience'
 
 function App() {
   const year = new Date().getFullYear()
@@ -34,10 +35,11 @@ function App() {
         <Highlights/>
         <Badges/>
 
+        <UnderlinedHeader title="Technical Experience" sx={{marginX: {xs: 5, md:10}}} />
+        <Experience/>
+
         <Box marginTop={5} sx={{padding: 2}}>
           <nav>
-            <Link to="/me/experience">Experience</Link>
-            {" | "}
             <Link to="/me/tech">Technologies</Link>
             {" | "}
             <Link to="/me/contact">Contact</Link>

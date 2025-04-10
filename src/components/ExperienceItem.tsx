@@ -1,7 +1,11 @@
-import { Box, CardMedia, List, ListItem } from "@mui/material";
+import { Box, CardMedia, Collapse, IconButton, List, ListItem } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import { useState } from "react";
+
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 
 export interface ExperienceItem {
     title: string;
@@ -17,11 +21,16 @@ interface ExperienceItemProps {
 }
 
 export function ExperienceItem({experienceItem}: ExperienceItemProps) {
+    const [expanded, setExpanded] = useState(false);
 
+    const handleToggle = () => {
+      setExpanded(!expanded);
+    };
     return (
         <Card sx={{ display:"flex", minWidth: 275, maxWidth:900, backgroundColor: 'background.paper', marginTop: 2 }}>
-            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Box sx={{  width: '100%' }}>
                 <CardContent>
+                  <Box>
                     <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14 }}>
                         {experienceItem.dates}
                     </Typography>
@@ -29,15 +38,21 @@ export function ExperienceItem({experienceItem}: ExperienceItemProps) {
                         {experienceItem.title}
                     </Typography>
                     <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>{experienceItem.company} | {experienceItem.location}</Typography>
-                    <List>
-                        {experienceItem.details.map((detail, index) => (
-                            <ListItem key={index} sx={{ padding: 0 }}>
-                                <Typography variant="body2">
-                                    {detail}
-                                </Typography>
-                            </ListItem>
-                        ))}
-                    </List>
+                    <IconButton onClick={handleToggle} sx={{ padding: 0 }}>
+                        {expanded ? <ArrowDropUpIcon /> : <ArrowDropDownIcon /> }
+                    </IconButton>
+                    <Collapse in={expanded} timeout="auto" unmountOnExit>
+                        <List>
+                            {experienceItem.details.map((detail, index) => (
+                                <ListItem key={index} sx={{ padding: 0 }}>
+                                    <Typography variant="body2">
+                                        {detail}
+                                    </Typography>
+                                </ListItem>
+                            ))}
+                        </List>
+                    </Collapse>
+                  </Box>
                 </CardContent>
             </Box>
             {experienceItem.img && (

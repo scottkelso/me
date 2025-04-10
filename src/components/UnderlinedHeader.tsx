@@ -2,12 +2,13 @@ import { styled, Typography, TypographyProps } from "@mui/material";
 
 const StyledHighlightsTitle = styled(Typography)(({ theme }) => ({
   position: 'relative',
+  display: 'inline-block',
   '&::after': {
     content: '""',
     position: 'absolute',
     left: 20,
     bottom: 5,
-    width: 205,
+    width: '100%',
     height: '0.7rem',
     backgroundColor: theme.palette.primary.main,
     zIndex: -1,

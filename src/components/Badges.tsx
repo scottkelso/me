@@ -6,7 +6,7 @@ import ibmImg from '../images/ibm.png'
 
 export function Badges(){
   return (
-    <Grid container spacing={1} maxWidth={900} margin="auto" marginTop={10} marginBottom={5}>
+    <Grid container spacing={1} maxWidth={900} margin="auto" marginBottom={15}>
       <Grid size={4}>
         <img src={awsImg} alt="Logo" style={{ width: '100%', maxWidth: 150, height: 'auto'}} />
       </Grid>

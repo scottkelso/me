@@ -4,9 +4,7 @@ import './index.css'
 import App from './App.tsx'
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Highlights } from "./pages/Highlights.tsx";
 import { Contact } from "./pages/Contact.tsx";
-import { Experience } from './pages/Experience.tsx';
 import { Technologies } from './pages/Technologies.tsx';
 
 const router = createBrowserRouter([
@@ -16,11 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/me/",
-        element: <Highlights />,
-      },
-      {
-        path: "/me/experience",
-        element: <Experience />,
+        element: <Technologies />,
       },
       {
         path: "/me/contact",
