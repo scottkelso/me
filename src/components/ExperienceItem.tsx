@@ -30,7 +30,7 @@ export function ExperienceItem({experienceItem}: ExperienceItemProps) {
     const theme = useTheme();
     const isSmOrLarger = useMediaQuery(theme.breakpoints.up('sm'));
     return (
-        <Card sx={{ display:"flex", minWidth: 275, maxWidth:900, backgroundColor: 'background.paper', marginTop: 2 }}>
+        <Card sx={{ display:"flex", minWidth: 275, maxWidth:900, backgroundColor: 'background.paper', marginTop: 2 }} onClick={handleToggle}>
             <Box sx={{  width: '100%' }}>
                 <CardContent>
                   <Box>
@@ -41,7 +41,7 @@ export function ExperienceItem({experienceItem}: ExperienceItemProps) {
                         {experienceItem.title}
                     </Typography>
                     <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>{experienceItem.company} | {experienceItem.location}</Typography>
-                    <IconButton onClick={handleToggle} sx={{ padding: 0 }}>
+                    <IconButton sx={{ padding: 0 }}>
                         {expanded ? <ArrowDropUpIcon /> : <ArrowDropDownIcon /> }
                     </IconButton>
                     <Collapse in={expanded} timeout="auto" unmountOnExit>
