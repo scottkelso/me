@@ -61,20 +61,16 @@ export default function MyWordCloud({ width, height }: ExampleProps) {
       >
         {(cloudWords) =>
           cloudWords.map((w, i) => (
-            <>
-              <Text
-                key={w.text}
-                fill={colors[i % colors.length]}
-                textAnchor={'middle'}
-                transform={`translate(${w.x}, ${w.y}) rotate(${w.rotate})`}
-                fontSize={w.size}
-                fontFamily={w.font}
-              >
-                {w.text}
-              </Text>
-            <p>Blah</p>
-            </>
-            
+            <Text
+              key={w.text}
+              fill={colors[i % colors.length]}
+              textAnchor={'middle'}
+              transform={`translate(${w.x}, ${w.y}) rotate(${w.rotate})`}
+              fontSize={w.size}
+              fontFamily={w.font}
+            >
+              {w.text}
+            </Text>
           ))
         }
       </Wordcloud>
