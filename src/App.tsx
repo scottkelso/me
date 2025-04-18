@@ -1,7 +1,4 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Grid from '@mui/material/Grid'
 import { Box, Button, Stack, Typography } from '@mui/material'
 import { HeroHeader } from './components/HeroHeader'
 import { Badges } from './components/Badges'
@@ -14,6 +11,7 @@ import { Experience } from './pages/Experience'
 import { Technologies } from './pages/Technologies'
 import { Contact } from './pages/Contact'
 import MyWordCloud from './components/MyWordCloud'
+import { Footer } from './components/Footer'
 
 function App() {
   const year = new Date().getFullYear()
@@ -62,21 +60,7 @@ function App() {
         </Box>
 
         <Box sx={{padding: 2}}>
-          <Grid container spacing={1} maxWidth={900} margin="auto" marginTop={5}>
-            <Grid size={6} alignContent={"center"}>
-              <p style={{fontStyle: 'italic'}}>Made with Vite + React + Material UI</p>
-              <p>© Copyright Joshua Kelso {year}</p>
-            </Grid>
-            <Grid size={6}>
-              <a href="https://vite.dev" target="_blank">
-                <img src={viteLogo} className="logo" alt="Vite logo" width={50} />
-              </a>
-              <a href="https://react.dev" target="_blank">
-                <img src={reactLogo} className="logo react" alt="React logo" width={50} />
-              </a>
-            </Grid>
-          </Grid>
-
+          <Footer year={year}/>
           <Socials/>
         </Box>
       </Box>
