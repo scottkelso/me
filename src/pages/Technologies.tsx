@@ -32,24 +32,24 @@ export function Technologies() {
 
   return (
     <Box maxWidth={900} margin="auto">
-    <TableContainer component={Paper} sx={{ marginTop: 5 }}>
-      <Typography variant="h2" padding={2}>Programming Languages</Typography>
-      <Table aria-label="simple table">
-          <TableBody>
-          {rows.map((row) => (
-              <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-              >
-              <TableCell component="th" scope="row">
-                  {row.name}
-              </TableCell>
-              <TableCell align="left">{row.description}</TableCell>
-              </TableRow>
-          ))}
-          </TableBody>
-      </Table>
-    </TableContainer>
+      <TableContainer component={Paper}>
+        <Typography variant="h2" padding={2}>Programming Languages</Typography>
+        <Table aria-label="simple table">
+            <TableBody>
+            {rows.map((row) => (
+                <TableRow
+                key={row.name}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                <TableCell component="th" scope="row">
+                    {row.name}
+                </TableCell>
+                <TableCell align="left">{row.description}</TableCell>
+                </TableRow>
+            ))}
+            </TableBody>
+        </Table>
+      </TableContainer>
       <TableContainer component={Paper} sx={{ marginTop: 5 }}>
       <Typography variant="h2" padding={2}>Utility Systems</Typography>
         <Table aria-label="simple table">

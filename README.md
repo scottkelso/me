@@ -11,6 +11,7 @@ This website is built using React + TypeScript + Vite and hosted via Github Page
 * Fix theme
 * Update logo
 * Refactor margin spacing in sections
+* Refactor experience into hosted text file or db
 
 ## About the Template
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

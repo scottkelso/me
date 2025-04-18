@@ -13,6 +13,7 @@ import { UnderlinedHeader } from './components/UnderlinedHeader'
 import { Experience } from './pages/Experience'
 import { Technologies } from './pages/Technologies'
 import { Contact } from './pages/Contact'
+import MyWordCloud from './components/MyWordCloud'
 
 function App() {
   const year = new Date().getFullYear()
@@ -45,6 +46,13 @@ function App() {
 
         <Box marginY={10}>
           <UnderlinedHeader title="Technologies" sx={{marginX: {xs: 5, md:10}}} />
+          <Box sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: 5,
+          }}>
+            <MyWordCloud width={600} height={300} />
+          </Box>
           <Technologies/>
         </Box>
 
