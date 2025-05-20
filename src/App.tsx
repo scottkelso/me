@@ -54,6 +54,31 @@ function App() {
           <Technologies/>
         </Box>
 
+        <Box marginY={10}>
+          <UnderlinedHeader title="Achievements & Skills" sx={{marginX: {xs: 5, md:10}}} />
+          <Box maxWidth={900} sx={{marginX: {xs: 2, md:7}}} marginTop={5} marginBottom={5}>
+            <ul style={{ textAlign: "left" }}>
+                <li>Bronze, Silver and Gold Duke of Edinburgh</li>
+                <li>Northgate Cup for excellence in ICT</li>
+                <li>McCreary Trophy for excellence in Musical Production</li>
+                <li>Clifford Bell Memorial Plate for excellence in Technology and Design</li>
+                <li>NGB (National Governing Bodies) Leadership Awarded qualifications for Sailing and Windsurfing</li>
+                <li>ABRSM Certificates Including Distinction in Grade 8 Singing and Merit in Grade 5 Music Theory</li>
+                <li>Gold British Science Association Crest Award</li>
+            </ul>
+          </Box>
+        </Box>
+
+        <Box marginY={10}>
+          <UnderlinedHeader title="Recommendations" sx={{marginX: {xs: 5, md:10}}} />
+          <Box maxWidth={900} sx={{marginX: {xs: 2, md:7}}} marginTop={5} marginBottom={5}>
+            <ul style={{ textAlign: "left" }}>
+                <li>Josh is future leader material who has a strong background in Python, web development, R&D, and AWS. He is proactive and always willing to take on new challenges. Josh has a proven track record of delivering high-quality projects on time and within budget. He is an excellent communicator who can work effectively with cross-functional teams and stakeholders. Josh is a quick learner and always stays up-to-date with the latest technologies and trends in his field. He is passionate about mentoring and developing his team members and is always willing to go the extra mile to ensure that his team delivers the best possible results. - Brynjar</li>
+                <li>Josh is a great listener, which contributes significantly to his ability to understand and address the needs of his colleagues. This quality, combined with his composed demeanour under pressure, has made him an invaluable asset to the team. - Joanne</li>
+            </ul>
+          </Box>
+        </Box>
+
         <Box marginTop={10}>
           <UnderlinedHeader title="Contact" sx={{marginX: {xs: 5, md:10}, marginBottom: 3}} />
           <Contact/>

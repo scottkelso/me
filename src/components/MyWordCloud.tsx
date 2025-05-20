@@ -32,6 +32,13 @@ export default function MyWordCloud({ width, height }: ExampleProps) {
     {text: 'Jenkins', value: 30 },
     {text: 'NodeJS', value: 60 },
     {text: 'GraphQL', value: 35 },
+    {text: 'Jenkins', value: 15 },
+    {text: 'Drone', value: 30 },
+    {text: 'Azure', value: 45 },
+    {text: 'Photoshop', value: 80 },
+    {text: 'Jira', value: 90 },
+    {text: 'Copilot', value: 50 },
+    {text: 'ChatGPT', value: 50 },
   ];
 
   const fontScale = scaleLog({

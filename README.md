@@ -6,12 +6,15 @@ This website is built using React + TypeScript + Vite and hosted via Github Page
 * Organise sections into multiple pages
 * Add title page and parallax
 * Add projects
-* Add technical experience
+* Tooltips on technologies
 * Add word cloud of technologies
 * Fix theme
 * Update logo
 * Refactor margin spacing in sections
 * Refactor experience into hosted text file or db
+* Add feedback quotes
+* Add graphic design portfolio
+* Add flags for countries I have worked in and countries I have visited
 
 ## About the Template
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
