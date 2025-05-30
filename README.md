@@ -6,8 +6,8 @@ This website is built using React + TypeScript + Vite and hosted via Github Page
 * Organise sections into multiple pages
 * Add title page and parallax
 * Add projects
+* Fix word cloud of technologies
 * Tooltips on technologies
-* Add word cloud of technologies
 * Fix theme
 * Update logo
 * Refactor margin spacing in sections
