@@ -49,7 +49,7 @@ function App() {
             justifyContent: 'center',
             marginTop: 5,
           }}>
-            <MyWordCloud width={600} height={300} />
+            <MyWordCloud />
           </Box>
           <Technologies/>
         </Box>

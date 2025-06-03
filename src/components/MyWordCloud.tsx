@@ -1,107 +1,39 @@
-import { Text } from '@visx/text';
-import { scaleLog } from '@visx/scale';
-import Wordcloud from '@visx/wordcloud/lib/Wordcloud';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material';
+import ReactWordcloud from 'react-wordcloud';
 
-interface ExampleProps {
-  width: number;
-  height: number;
-  showControls?: boolean;
-}
+const words = [
+  { text: 'Python', value: 100 },
+  { text: 'TypeScript', value: 80 },
+  { text: 'Java', value: 60 },
+  { text: 'JavaScript', value: 70 },
+  { text: 'SQL', value: 65 },
+  { text: 'AWS', value: 90 },
+  { text: 'Docker', value: 75 },
+  { text: 'Kubernetes', value: 75 },
+  { text: 'NodeJS', value: 80 },
+  { text: 'GraphQL', value: 55 },
+  { text: 'Jenkins', value: 40 },
+  { text: 'Drone', value: 50 },
+  { text: 'Azure', value: 40 },
+  { text: 'Photoshop', value: 50 },
+  { text: 'Jira', value: 50 },
+  { text: 'Copilot', value: 65 },
+  { text: 'ChatGPT', value: 65 },
+];
 
-export interface WordData {
-  text: string;
-  value: number;
-}
+const options = {
+  rotations: 2,
+  rotationAngles: [0, 0] as [number, number],
+  fontSizes: [20, 80] as [number, number],
+  fontFamily: 'Impact',
+  colors: ['#2e7ae8', '#FFFFFF', '#82a6c2', '#A4C8E1', '#D9E6F2', '#33ccc9'],
+};
 
-type SpiralType = 'archimedean' | 'rectangular';
+const callbacks = {
+  getWordTooltip: (word: any) => word.description || word.text,
+};
 
-export default function MyWordCloud({ width, height }: ExampleProps) {
-  const colors = ['#2e7ae8', '#FFFFFF', '#82a6c2', '#A4C8E1', '#D9E6F2', '#33ccc9'];
-
-  const words = [
-    {text: 'Python', value: 100 },
-    {text: 'Typescript', value: 60 },
-    {text: 'Java', value: 30 },
-    {text: 'Javascript', value: 20 },
-    {text: 'SQL', value: 45 },
-    {text: 'AWS', value: 80 },
-    {text: 'Docker', value: 70 },
-    {text: 'Kubernetes', value: 55 },
-    {text: 'Jenkins', value: 30 },
-    {text: 'NodeJS', value: 60 },
-    {text: 'GraphQL', value: 35 },
-    {text: 'Jenkins', value: 15 },
-    {text: 'Drone', value: 30 },
-    {text: 'Azure', value: 45 },
-    {text: 'Photoshop', value: 80 },
-    {text: 'Jira', value: 90 },
-    {text: 'Copilot', value: 50 },
-    {text: 'ChatGPT', value: 50 },
-  ];
-
-  const fontScale = scaleLog({
-    domain: [Math.min(...words.map((w) => w.value)), Math.max(...words.map((w) => w.value))],
-    range: [10, 100],
-  });
-  const fontSizeSetter = (datum: WordData) => fontScale(datum.value);
-
-  const fixedValueGenerator = () => 0.5;
-
-
-  const theme = useTheme();
-  const isSmOrLarger = useMediaQuery(theme.breakpoints.up('sm'));
-
+export default function MyWordCloud() {
   return (
-    <div className="wordcloud">
-      <Wordcloud
-        words={words}
-        width={isSmOrLarger ? width : width / 2}
-        height={height}
-        fontSize={fontSizeSetter}
-        font={'Impact'}
-        padding={2}
-        spiral={"archimedean" as SpiralType}
-        rotate={0}
-        random={fixedValueGenerator}
-      >
-        {(cloudWords) =>
-          cloudWords.map((w, i) => (
-            <Text
-              key={w.text}
-              fill={colors[i % colors.length]}
-              textAnchor={'middle'}
-              transform={`translate(${w.x}, ${w.y}) rotate(${w.rotate})`}
-              fontSize={w.size}
-              fontFamily={w.font}
-            >
-              {w.text}
-            </Text>
-          ))
-        }
-      </Wordcloud>
-      <style>{`
-        .wordcloud {
-          display: flex;
-          flex-direction: column;
-          user-select: none;
-        }
-        .wordcloud svg {
-          margin: 1rem 0;
-          cursor: pointer;
-        }
-
-        .wordcloud label {
-          display: inline-flex;
-          align-items: center;
-          font-size: 14px;
-          margin-right: 8px;
-        }
-        .wordcloud textarea {
-          min-height: 100px;
-        }
-      `}</style>
-    </div>
+    <ReactWordcloud words={words} options={options} callbacks={callbacks} />
   );
 }
