@@ -1,6 +1,12 @@
 import ReactWordcloud from 'react-wordcloud';
 
-const words = [
+interface WordCloudWord {
+  text: string;
+  value: number;
+  description?: string;
+}
+
+const words: WordCloudWord[] = [
   { text: 'Python', value: 100 },
   { text: 'TypeScript', value: 80 },
   { text: 'Java', value: 60 },
@@ -29,7 +35,7 @@ const options = {
 };
 
 const callbacks = {
-  getWordTooltip: (word: any) => word.description || word.text,
+  getWordTooltip: (word: WordCloudWord) => word.description || word.text,
 };
 
 export default function MyWordCloud() {
