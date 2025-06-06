@@ -8,7 +8,7 @@ import greensoftwareImg from '../images/green-software.png'
 
 export function Badges(){
   return (
-    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center" 
+    <Stack direction={{ xs: 'column', md: 'row' }} spacing={2} justifyContent="center" 
       sx={{ 
         marginBottom: 10,      
         justifyContent: "center",
