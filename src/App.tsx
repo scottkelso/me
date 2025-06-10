@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <HeroHeader />
-      <Box sx={{ margin: '0 auto', maxWidth: '1280px', textAlign: 'center' }} >
+      <Box sx={{ margin: '0 auto', width: '100vw', maxWidth: '1280px', textAlign: 'center' }} >
         <Typography variant='h6' sx={{marginX: {xs: 5, md:10}}} marginTop={10} marginBottom={5} >
           Josh is a lead software engineer with {yearsExperience} year's technical industry experience with a 1st honour master's in computer science from <a href='https://www.qub.ac.uk/'>Queen's University Belfast</a>.  Having spent 2+ years in R'n'D Josh has a keen interest for innovation services, research, L&D and is equipped with initiative and drive to ensure that he capitalises on these new and emerging digital discoveries and curates them into new and existing client products.
         </Typography>
