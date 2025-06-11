@@ -16,6 +16,12 @@ This website is built using React + TypeScript + Vite and hosted via Github Page
 * Add graphic design portfolio
 * Add flags for countries I have worked in and countries I have visited
 
+## Running Locally
+npm install
+npm dev run
+npm run lint
+npm run test
+
 ## About the Template
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

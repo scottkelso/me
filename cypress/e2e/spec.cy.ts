@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('Home page', () => {
   it('Redirects to home page', () => {
     cy.visit('http://localhost:5173/')
