@@ -12,6 +12,7 @@ import { Technologies } from './pages/Technologies'
 import { Contact } from './pages/Contact'
 import MyWordCloud from './components/MyWordCloud'
 import { Footer } from './components/Footer'
+import { useState } from 'react'
 
 function App() {
   const year = new Date().getFullYear()
@@ -19,6 +20,8 @@ function App() {
   const yearsExperience = year - START_CAREER_YEAR
 
   const CV_URL = "https://1drv.ms/b/c/c486233ae5b6e226/ESbituU6I4YggMTwOgAAAAABhTY3dWcHLoA5S1k7pw0Uaw"
+  const [showTechnologies, setShowTechnologies] = useState(false);
+
   return (
     <>
       <HeroHeader />
@@ -51,7 +54,14 @@ function App() {
           }}>
             <MyWordCloud />
           </Box>
-          <Technologies/>
+          {!showTechnologies && (
+            <Box sx={{ marginTop: 2 }}>
+              <Button variant="contained" onClick={() => setShowTechnologies(true)}>
+                See More...
+              </Button>
+            </Box>
+          )}
+          {showTechnologies && <Technologies />}
         </Box>
 
         <Box marginY={10}>
@@ -70,7 +80,7 @@ function App() {
         </Box>
 
         <Box marginY={10}>
-          <UnderlinedHeader title="Recommendations" sx={{marginX: {xs: 5, md:10}}} />
+          <UnderlinedHeader title="Appraisal" sx={{marginX: {xs: 5, md:10}}} />
           <Box maxWidth={900} sx={{marginX: {xs: 2, md:7}}} marginTop={5} marginBottom={5}>
             <ul style={{ textAlign: "left" }}>
                 <li>Josh is future leader material who has a strong background in Python, web development, R&D, and AWS. He is proactive and always willing to take on new challenges. Josh has a proven track record of delivering high-quality projects on time and within budget. He is an excellent communicator who can work effectively with cross-functional teams and stakeholders. Josh is a quick learner and always stays up-to-date with the latest technologies and trends in his field. He is passionate about mentoring and developing his team members and is always willing to go the extra mile to ensure that his team delivers the best possible results. - Brynjar</li>
