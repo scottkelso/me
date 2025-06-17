@@ -2,7 +2,6 @@
 This website is built using React + TypeScript + Vite and hosted via Github Pages.
 
 ## TODO
-* Add navigation bar
 * Organise sections into multiple pages
 * Add title page and parallax
 * Add projects
@@ -15,6 +14,8 @@ This website is built using React + TypeScript + Vite and hosted via Github Page
 * Add feedback quotes
 * Add graphic design portfolio
 * Add flags for countries I have worked in and countries I have visited
+* Add more tests
+* Add github build status
 
 ## Running Locally
 npm install

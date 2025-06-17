@@ -13,6 +13,7 @@ import { Contact } from './pages/Contact'
 import MyWordCloud from './components/MyWordCloud'
 import { Footer } from './components/Footer'
 import { useState } from 'react'
+import NavBar from './components/NavBar'
 
 function App() {
   const year = new Date().getFullYear()
@@ -24,9 +25,10 @@ function App() {
 
   return (
     <>
+      <NavBar />
       <HeroHeader />
       <Box sx={{ margin: '0 auto', width: '100vw', maxWidth: '1280px', textAlign: 'center' }} >
-        <Typography variant='h6' sx={{marginX: {xs: 5, md:10}}} marginTop={10} marginBottom={5} >
+        <Typography id="intro" variant='h6' sx={{marginX: {xs: 5, md:10}}} marginTop={10} marginBottom={5} >
           Josh is a lead software engineer with {yearsExperience} year's technical industry experience with a 1st honour master's in computer science from <a href='https://www.qub.ac.uk/'>Queen's University Belfast</a>.  Having spent 2+ years in R'n'D Josh has a keen interest for innovation services, research, L&D and is equipped with initiative and drive to ensure that he capitalises on these new and emerging digital discoveries and curates them into new and existing client products.
         </Typography>
 
@@ -34,18 +36,18 @@ function App() {
           <Button variant="contained" href={CV_URL} target='_blank' endIcon={<DownloadIcon />}>Download CV</Button>
         </Stack>
 
-        <Box marginY={10}>
+        <Box id="highlights" marginY={10}>
           <UnderlinedHeader title="Highlights" sx={{marginX: {xs: 5, md:10}}} />
           <Highlights/>
           <Badges/>
         </Box>
 
-        <Box marginY={10}>
+        <Box id="experience" marginY={10}>
           <UnderlinedHeader title="Technical Experience" sx={{marginX: {xs: 5, md:10}}} />
           <Experience/>
         </Box>
 
-        <Box marginY={10}>
+        <Box id="technologies" marginY={10}>
           <UnderlinedHeader title="Technologies" sx={{marginX: {xs: 5, md:10}}} />
           <Box sx={{
             display: 'flex',
@@ -64,7 +66,7 @@ function App() {
           {showTechnologies && <Technologies />}
         </Box>
 
-        <Box marginY={10}>
+        <Box id="skills" marginY={10}>
           <UnderlinedHeader title="Achievements & Skills" sx={{marginX: {xs: 5, md:10}}} />
           <Box maxWidth={900} sx={{marginX: {xs: 2, md:7}}} marginTop={5} marginBottom={5}>
             <ul style={{ textAlign: "left" }}>
@@ -79,7 +81,7 @@ function App() {
           </Box>
         </Box>
 
-        <Box marginY={10}>
+        <Box id="appraisal" marginY={10}>
           <UnderlinedHeader title="Appraisal" sx={{marginX: {xs: 5, md:10}}} />
           <Box maxWidth={900} sx={{marginX: {xs: 2, md:7}}} marginTop={5} marginBottom={5}>
             <ul style={{ textAlign: "left" }}>
@@ -89,7 +91,7 @@ function App() {
           </Box>
         </Box>
 
-        <Box marginTop={10}>
+        <Box id="contact" marginTop={10}>
           <UnderlinedHeader title="Contact" sx={{marginX: {xs: 5, md:10}, marginBottom: 3}} />
           <Contact/>
         </Box>
