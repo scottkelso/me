@@ -6,6 +6,7 @@ import { Socials } from "./Socials";
 
 export function HeroHeader(){
   const theme = useTheme();
+
   return (
     <Box
       id="hero-header"
@@ -22,7 +23,6 @@ export function HeroHeader(){
         sx={{
           position: 'absolute',
           inset: 0,
-          transform: `translateY(${scrollY * 0.5}px)`,
           transition: 'transform 0.1s ease-out'
         }}
       >
@@ -59,7 +59,6 @@ export function HeroHeader(){
         <Box
           sx={{
             color: 'white',
-            transform: `translateY(${scrollY * 0.2}px)`,
             transition: 'transform 0.1s ease-out'
           }}
           maxWidth={600}
