@@ -2,6 +2,7 @@ import { Wordcloud } from '@visx/wordcloud';
 import { scaleLog } from '@visx/scale';
 import { Text } from '@visx/text';
 import { useTooltip } from '@visx/tooltip';
+import technologiesCSV from './technologies.csv?raw';
 
 interface WordCloudWord {
   text: string;
@@ -9,32 +10,63 @@ interface WordCloudWord {
   description?: string;
 }
 
-const words: WordCloudWord[] = [
-  { text: 'Python', value: 100 },
-  { text: 'TypeScript', value: 80 },
-  { text: 'Java', value: 60 },
-  { text: 'JavaScript', value: 70 },
-  { text: 'SQL', value: 65 },
-  { text: 'AWS', value: 90 },
-  { text: 'Docker', value: 75 },
-  { text: 'Kubernetes', value: 75 },
-  { text: 'NodeJS', value: 80 },
-  { text: 'GraphQL', value: 55 },
-  { text: 'Jenkins', value: 40 },
-  { text: 'Drone', value: 50 },
-  { text: 'Azure', value: 40 },
-  { text: 'Photoshop', value: 50 },
-  { text: 'Jira', value: 50 },
-  { text: 'Copilot', value: 65 },
-  { text: 'ChatGPT', value: 65 },
-];
+interface TechnologyRow {
+  Technology: string;
+  Description: string;
+  Confidence: string;
+  Category: string;
+  LastUsed: string;
+}
 
-const colors = ['#2e7ae8', '#FFFFFF', '#82a6c2', '#A4C8E1', '#D9E6F2', '#33ccc9'];
+interface CSVLine {
+  text: string;
+  value: number;
+  description: string;
+}
 
-const fontScale = scaleLog({
-  domain: [Math.min(...words.map(w => w.value)), Math.max(...words.map(w => w.value))],
-  range: [20, 80],
-});
+const parseCSV = (csv: string): WordCloudWord[] => {
+  const lines = csv.trim().split('\n');
+  
+  return lines.slice(1)
+    .map(parseCSVLine())
+    .filter(word => word.text && word.value);
+};
+
+const parseCSVLine = (): (value: string, index: number, array: string[]) => CSVLine => {
+  return line => {
+    // Handle quoted fields with commas
+    const values: string[] = [];
+    let currentValue = '';
+    let insideQuotes = false;
+
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+      if (char === '"') {
+        insideQuotes = !insideQuotes;
+      } else if (char === ',' && !insideQuotes) {
+        values.push(currentValue);
+        currentValue = '';
+      } else {
+        currentValue += char;
+      }
+    }
+    values.push(currentValue);
+
+    const technology: TechnologyRow = {
+      Technology: values[0],
+      Description: values[1],
+      Confidence: values[2],
+      Category: values[3],
+      LastUsed: values[4],
+    };
+
+    return {
+      text: technology.Technology,
+      value: parseInt(technology.Confidence) || 50,
+      description: technology.Description,
+    };
+  };
+}
 
 export default function MyWordCloud() {
   const isMobile = window.innerWidth < 600;
@@ -49,6 +81,15 @@ export default function MyWordCloud() {
     hideTooltip,
     tooltipOpen,
   } = useTooltip<{ text: string }>();
+
+const words: WordCloudWord[] = parseCSV(technologiesCSV);
+
+const colors = ['#2e7ae8', '#FFFFFF', '#82a6c2', '#A4C8E1', '#D9E6F2', '#33ccc9'];
+
+const fontScale = scaleLog({
+  domain: [Math.min(...words.map(w => w.value)), Math.max(...words.map(w => w.value))],
+  range: [20, 80],
+});
 
   return (
     <div style={{ position: 'relative', width, height, margin: '0 auto', maxWidth: '100vw' }}>

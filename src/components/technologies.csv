@@ -1,0 +1,22 @@
+Technology,Description,Confidence,Category,LastUsed
+Python,"2 years' experience including AWS data pipelines, and ML; running AI Camp 2017 and 2019 respectfully",100,Programming Language,today
+TypeScript,"2 years' on and off experience on web applications (including industry training in angular 1.5 and react), and offline web development",80,Programming Language,today
+Java,"2 years' experience in university (including professional 12month placement in industry) android game development, backend dropwizard applications and small swing UI facing programs",60,Programming Language,today
+JavaScript,"2 years' on and off experience on web applications (including industry training in angular 1.5 and react), and offline web development",70,Programming Language,today
+SQL,"Over 2 years' experience using MySQL, Postgres and java libraries such as JOOQ",65,Programming Language,today
+Kotlin,"2 months of use backend on a dropwizard application",,Programming Language,today
+Groovy,"Jenkins CI pipeline builds and integration test classes using Cucumber and Spock libraries",,Programming Language,2025-01-01T00:00:00Z
+AWS,"Associate Developer Certification owned, calling upon 1 years experience building prototypes including a webapp using Amplify for my own digital startup company",90,Platform,2025-01-01T00:00:00Z
+Docker,"Over 1 year of experience, including docker compose",75,Platform,2025-01-01T00:00:00Z
+Kubernetes,"1 years experience deplying jobs into a Kubernetes cluster",75,Platform,2025-01-01T00:00:00Z
+Jenkins,"Used for deployments, pipeline scripts written in groovy",40,CI/CD Tool,2025-01-01T00:00:00Z
+Databases,"Some experience with GraphQL, Postgres, Redshift, and DynamoDB",,Database,2025-01-01T00:00:00Z
+Jira,"Over 1 years experience using Jira for project management and issue tracking",50,Software,2025-01-01T00:00:00Z
+NodeJS,"Over 4 years of experience on multiple different web platforms",80,Platform,2025-01-01T00:00:00Z
+GraphQL,"Several projects using AWS infrastructure",55,Query Language,2025-01-01T00:00:00Z
+Drone,"1 year of pipelines on several complicated projects",50,CI/CD Tool,2025-01-01T00:00:00Z
+Azure,"2 years of experience building PoC prototypes on Azure",40,Platform,2025-01-01T00:00:00Z
+Photoshop,"Over 6 years on and off experience using Photoshop for graphic design and image editing",50,Software,2025-01-01T00:00:00Z
+Copilot,"Over 1 years experience using Copilot for code suggestions and completions",65,AI Tool,2025-01-01T00:00:00Z
+ChatGPT,"Over 1 years experience using ChatGPT for conversational AI applications",65,AI Tool,2025-01-01T00:00:00Z
+Build Tools,"A full year's technical experience using Gradle, Gulp & Grunt",,Tool,2025-01-01T00:00:00Z
